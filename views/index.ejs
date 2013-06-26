@@ -1,4 +1,4 @@
-<% page = { 'title' : 'PAGE_TITLE', 'key': 'INDEX_PAGE_NAME'} %>
+<% page = { title: t('title'), 'key': 'INDEX_PAGE_NAME'} %>
 <% assets = { 'css' : [], 'js' : [] } %>
 <div id="main" class="experiments">
   <div class="no-layout">
@@ -8,7 +8,16 @@
         <%- t('welcome_message')%> <img src="<%= img('icon/arrow_left_white_11x11.png') %>" alt="">
       </p>
 
-      <a href="sample" class="btn btn-water"><%- t('sample_link')%></a>
+      <!-- <a href="sample" class="btn btn-water"><%- t('sample_link')%></a> -->
+
+      <p>
+        <%= Message %> <%= Person %>
+      </p>
+      <ul>
+        <li><a href="anotherPage"><%- i18n('another_page')%></a></li>
+        <li><a href="noLayoutPage"><%- i18n('no_layout_page')%></a></li>
+        <li><a href="angularPage"><%- i18n('angular_page')%></a></li>
+      </ul>
     </section>
   </div>
 </div>

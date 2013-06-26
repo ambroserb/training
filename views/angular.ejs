@@ -1,0 +1,27 @@
+<% page = { 'title' : i18n('angular_title'), 'key': 'angularpage'} %>
+<% assets = { 'css' : [], 'js' : ['angular-1.0.3.js', 'ListCtrl.js'] } %>
+
+
+<h1 class="serif"><%- i18n('angular_title') %></h1>
+<p>
+  <%- i18n('content') %>
+</p>
+
+<div ng-app>
+  <div ng-controller="ListCtrl">
+
+    <ul>
+      <li ng-repeat="item in list">
+        <div ng-click="editItem($index, item)">
+          <span ng-hide="item.inEditMode">{{item.name}}</span>
+          <form ng-hide="!item.inEditMode" ng-submit="itemUpdated(item)"><input type="text" ng-model="item.name" value="{{item.name}}" /> <button>Save</button></form>
+          (<a href="" ng-click="removeItem($index)">delete</a>)
+        </div>
+      </li>
+    </ul>
+
+    <form ng-submit="addItem(newItem)">
+      Add Item: <input type="text" ng-model="newItem" placeholder="Enter new item here" /> <button>Add</button>
+    </form>
+  </div>
+</div>

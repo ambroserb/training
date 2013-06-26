@@ -1,5 +1,9 @@
 {
-	"welcome_title": "Welcome Landing Page",
-	"welcome_message": "Welcome to the training landing page. Replace this content with your own",
-  "sample_link": "View a sample page"
+  "title": "Frontier Training App",
+	"welcome_title": "Welcome To Frontier",
+	"welcome_message": "Welcome to my Frontier Training Page",
+  "sample_link": "View a sample page",
+  "another_page": "Another Page",
+  "no_layout_page": "No Layout Page",
+  "angular_page": "Angular Page"
 }
